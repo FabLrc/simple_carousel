@@ -1,0 +1,307 @@
+/* Container principal */
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Image principale */
+.carousel-main-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Container pour miniatures + boutons */
+.carousel-thumbnails-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Boutons de navigation */
+.carousel-prev,
+.carousel-next {
+  background: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  transform: scale(1.1);
+}
+
+/* Chevrons (V horizontal) */
+.carousel-prev::before,
+.carousel-next::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  display: block;
+}
+
+.carousel-prev::before {
+  transform: rotate(45deg);
+}
+
+.carousel-next::before {
+  transform: rotate(-135deg);
+}
+
+/* Container des miniatures */
+.carousel-thumbnails {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Miniatures */
+.carousel-thumb {
+  width: 100px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  opacity: 0.7;
+}
+
+.carousel-thumb:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.carousel-thumb.active {
+  border-color: #007bff;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-main-image {
+    max-height: 300px;
+    border-radius: 15px;
+  }
+  
+  .carousel-thumbnails-wrapper {
+    gap: 15px;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-prev::before,
+  .carousel-next::before {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel-thumb {
+    width: 70px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-main-image {
+    max-height: 250px;
+    border-radius: 10px;
+  }
+  
+  .carousel-thumbnails-wrapper {
+    gap: 10px;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .carousel-thumb {
+    width: 60px;
+    height: 50px;
+  }
+}/* Container principal */
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Image principale */
+.carousel-main-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Container pour miniatures + boutons */
+.carousel-thumbnails-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Boutons de navigation */
+.carousel-prev,
+.carousel-next {
+  background: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  transform: scale(1.1);
+}
+
+/* Chevrons (V horizontal) */
+.carousel-prev::before,
+.carousel-next::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  display: block;
+}
+
+.carousel-prev::before {
+  transform: rotate(45deg);
+}
+
+.carousel-next::before {
+  transform: rotate(-135deg);
+}
+
+/* Container des miniatures */
+.carousel-thumbnails {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Miniatures */
+.carousel-thumb {
+  width: 100px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  opacity: 0.7;
+}
+
+.carousel-thumb:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.carousel-thumb.active {
+  border-color: #007bff;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-main-image {
+    max-height: 300px;
+    border-radius: 15px;
+  }
+  
+  .carousel-thumbnails-wrapper {
+    gap: 15px;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-prev::before,
+  .carousel-next::before {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel-thumb {
+    width: 70px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-main-image {
+    max-height: 250px;
+    border-radius: 10px;
+  }
+  
+  .carousel-thumbnails-wrapper {
+    gap: 10px;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .carousel-thumb {
+    width: 60px;
+    height: 50px;
+  }
+}
